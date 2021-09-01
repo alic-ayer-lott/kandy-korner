@@ -5,7 +5,7 @@ export const ProductList = () => {
 
     useEffect(
         () => {
-            fetch("http://localhost:8088/Products")
+            fetch("http://localhost:8088/Products?_expand=productType")
                 .then(res => res.json())
                 .then ((productData) => {
                     changeProduct(productData)
@@ -19,7 +19,7 @@ export const ProductList = () => {
             {
                 products.map(
                     (product) => {
-                        return <p key={`product--${product.id}`}>The ID of {product.name} is {product.id} and type is {product.productTypeId}. It costs {product.price}.</p>
+                        return <p key={`product--${product.id}`}>{product.name} is a {product.productType.category} and costs $ {product.price}.</p>
                     }
                 )
             }
