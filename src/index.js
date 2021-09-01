@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Kandy } from "./components/Kandy"
+import { Kandy } from "./components/Kandy";
 
 ReactDOM.render(
   <React.StrictMode>
